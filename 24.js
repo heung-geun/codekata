@@ -21,31 +21,31 @@ function solution(seoul) {
 // console.log(solution(["형근",  "Kim", "도른"]));
 
 
-// function solution(seoul) {
-//     let answer = 0;
-//     seoul.find(function seoulKim(value) {
-//         for(let i = 0; value !== "Kim"; i++){
-//             answer += 1;
-//         }
-//     })
-//     return console.log(`김서방은 ${answer}에 있다`);
-// }
-// solution(["형근",  "Kim", "도른"]);
+function solution(seoul) {
+    let answer = 0;
+    seoul.find(function seoulKim(value) {
+        for(let i = 0; value !== "Kim"; i++){
+            answer += 1;
+        }
+    })
+    return console.log(`김서방은 ${answer}에 있다`);
+}
+solution(["형근",  "Kim", "도른"]);
 
 
 // 이 코드 짜다가 포기하고 인터넷 뒤진거 실화냐?
 
-// function findKim(seoul){
-//     var idx = 0;
-//           for (var i = 0; i < seoul.length; i++){
-//          if (seoul[i] === 'Kim'){
-//            idx += i;
-//            break;
-//         }
-//         }
+function findKim(seoul){
+    var idx = 0;
+          for (var i = 0; i < seoul.length; i++){
+         if (seoul[i] === 'Kim'){
+           idx += i;
+           break;
+        }
+        }
   
-//     return "김서방은 " + idx + "에 있다";
-//   }
+    return "김서방은 " + idx + "에 있다";
+  }
   
-//   // 실행을 위한 테스트코드입니다.
-//   console.log( findKim(["Queen", "Tod", "Kim"]));
+  // 실행을 위한 테스트코드입니다.
+  console.log( findKim(["Queen", "Tod", "Kim"]));
