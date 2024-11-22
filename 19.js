@@ -27,12 +27,35 @@
 
 // function solution(n) {
 //     let answer = 0;
-//     let num1 = n / 2
-//     let decimal = 
-//     for(let i = 2; i < num1; i += decimal) {
+//     let strNum = String(n);
+//     for(let i1 = 2; i1 < n.length; i1++) {
+
+//     }
+//     for(let i2 = 2; i2 < num1; i2 += decimal) {
 
 //     }
 // }
+
+
+// 소수 구하는 코드 ? 
+
+// function solution(n) {
+//     // 0이 포함되기 때문에 입력받은 수보다 하나 크게
+//     const arr = Array.from({ length: n + 1 }).fill(true);
+//     arr[0] = arr[1] = false;
+//     const sqrt = parseInt(Math.sqrt(n));
+  
+//     for (let i = 2; i <= sqrt; i++) {
+//       if (arr[i] === true) {
+//         for (let j = 2; i * j <= n; j++) {
+//           arr[i * j] = false;
+//         }
+//       }
+//     }
+  
+//     return arr.filter((v) => v === true).length;
+//   }
+
 
 
 
