@@ -18,48 +18,53 @@
 
 // 입출력 예#2
 // 3은 양의 정수의 제곱이 아니므로, -1을 리턴합니다.
+// for 반복문 사용해서 하면됨...
 
-
-// n 나누기 소수의 나머지가 0이면 문제 위의 값 반환
-// 1. 소수를 구해
-// 2. 소수를 하나씩 불러와서 대입 해봐야하는데
-// 3. 반복문으로...
+function solution(n) {
+    let answer = -1;
+    for(let i = 1; i <= n; i++) {
+        if(i * i === n) {
+            return (i + 1) * (i + 1);
+        }
+    }
+    return answer;
+}
+console.log(solution(1))
 
 // function solution(n) {
-//     let answer = 0;
-//     let strNum = String(n);
-//     for(let i1 = 2; i1 < n.length; i1++) {
-
+//     // i를 1부터 n까지 증가시켜줍니다.
+//     for (let i = 1; i <= n; i++) {
+//         // if문으로 i 와 i 를 곱했을 때 정확히 n이 되는 i 값을 구해줍니다.
+//         if (i * i === n) {
+//             // i 와 i 가 곱해졌을 때 n이 된다면 아래의 식을 실행하여 답을 제출
+//             return (i + 1) * (i + 1);
+//         }
 //     }
-//     for(let i2 = 2; i2 < num1; i2 += decimal) {
+//     // 그게 아니라면 -1을 제출
+//     return -1;
+// }
 
+// 다른 정답
+
+// function solution(n) {
+//     var answer = 0;
+//     // for 문으로 i 와 a 의 값을 0으로 선언해준 뒤, i 를 n만큼 증가시켜줍니다.
+//     for(let i=0, a=0; i<=n; i++){
+//         // 만약 n / i 가 i 와 완벽하게 같다면 a 에 i + 1 의 값을 대입해주고, 대입된 a 를 a * a 하여 답으로 제출
+//         if(n/i===i){
+//         a = i + 1
+//         return a*a
+//         // 그게 아니라면 answer에 -1을 대입해줍니다.
+//         } else {
+//         answer = -1
+//         }
 //     }
+//     return answer;
 // }
 
 
-// 소수 구하는 코드 ? 
-
-// function solution(n) {
-//     // 0이 포함되기 때문에 입력받은 수보다 하나 크게
-//     const arr = Array.from({ length: n + 1 }).fill(true);
-//     arr[0] = arr[1] = false;
-//     const sqrt = parseInt(Math.sqrt(n));
-  
-//     for (let i = 2; i <= sqrt; i++) {
-//       if (arr[i] === true) {
-//         for (let j = 2; i * j <= n; j++) {
-//           arr[i * j] = false;
-//         }
-//       }
-//     }
-  
-//     return arr.filter((v) => v === true).length;
-//   }
-
-
-
-
 // 오답... 시간이 너무 오래걸림
+// 바보였네... 와일문 하나 왜쓴거? 
 
 // function solution(n) {
 //     let answer = -1;
@@ -75,3 +80,7 @@
 //     }
 //     return answer;
 // }
+
+
+
+
